@@ -440,7 +440,7 @@ def frankeRollins2013(
     stiff_clay_threshold=96,
     kind: str = "static",
     ymax: float = 0.0,
-    output_length: int = 20,
+    output_length: int = 1000,
 ):
     """
     Creates the Franke and Rollins (2013) liquefied soil p-y curve from relevant input.
@@ -488,7 +488,8 @@ def frankeRollins2013(
     Pmax = min(Pmax_deep, Pmax_shallow)
 
     # ylist_in = [0.0, 0.1 * y50, 0.21 * y50, 1 * y50, 3 * y50, 8 * y50, 15 * y50, ymax]
-    ylist_in = [0.0, 0.001 * y50, 0.005 * y50, 0.008 * y50, 0.01 * y50, 0.02 * y50, 0.05 * y50, 0.08 * y50, 0.09 * y50, 0.1 * y50, 0.21 * y50, 1 * y50, 3 * y50, 8 * y50, 15 * y50, ymax]
+    ylist_in = [0.0, 0.001 * y50, 0.005 * y50, 0.008 * y50, 0.01 * y50, 0.02 * y50, 0.05 * y50, 0.08 * y50, 0.09 * y50, 0.1 * y50, 0.21 * y50, 1 * y50, 3 * y50, 8 * y50, 15 * y50, ymax, 1.5 * ymax, 2 * ymax, 4 * ymax]
+    ylist_in.sort()
     ylist_out = []
     for i in range(len(ylist_in)):
         if ylist_in[i] <= ymax:
