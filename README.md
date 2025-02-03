@@ -8,7 +8,7 @@ You can load the environment in anaconda prompt by
 conda env create -f environment.yml
 ```
 
-Source code is in the notebooks folder.
+Source code for calculations of Pier 1 and Pier 3 are in the notebooks folder. Note that Georgiadis layering correction is applied manually by assigning a d_adj parameter to the constitutive soil models. The d_adj value for each layer is evaluated in georgiadis notebooks. I have yet to implement this functionally in OpenPile. Stay tuned!
 
 # OpenPile
 
