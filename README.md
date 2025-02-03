@@ -1,3 +1,15 @@
+# NZSEE 2025
+
+This branch of openpile contains source code and notebooks used for the paper Seismic lateral pile capacity analysis in marine soils: Philippine practices with open-source frameworks. 
+
+You can load the environment in anaconda prompt by 
+
+```bash
+conda env create -f environment.yml
+```
+
+Source code is in the notebooks folder.
+
 # OpenPile
 
 Open-source PILE software.
